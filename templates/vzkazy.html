@@ -1,0 +1,21 @@
+<h1>Vzkazník</h1>
+
+{% if not vzkazy %}
+<p>Žádné vzkazy tu nejsou
+{% else %}
+
+<ul>
+    {% for vzkaz in vzkazy %}
+    <li>{{ vzkaz }}</li>
+    {% endfor %}
+</ul>
+
+{% endif %}
+
+<hr>
+
+<form action="/vzkazy" method="POST">
+    <input type="text" name="jmeno" value="{{ jmeno }}" placeholder="jak se jmenuješ?">
+    <input size=100 type="text" name="vzkaz" placeholder="napiš vzkaz">
+    <input type="submit" value="pošli">
+</form>

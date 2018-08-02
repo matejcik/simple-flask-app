@@ -1,0 +1,19 @@
+<h2>Tohle je moje stránka
+{% if name == "petr" %}
+Tajná zpráva pro Petra
+{% endif %}
+
+
+{% if name == "karel" %}
+    <h1>NEMÁM TĚ RÁD
+    KARLE
+    </h1>
+{% elif name == "kristyna" %}
+    <h1>
+    miluju tě Kristýno <3
+    </h1>
+{% else %}
+    <h1>Hello, {{ name }}</h1>
+    <p>
+    Moje jméno je {{ myname }}
+{% endif %}
